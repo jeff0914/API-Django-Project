@@ -22,11 +22,6 @@ docker-compose up -d
 ```
 將會建立和啟動所有必要的容器（Django, MariaDB)
 
-### 執行資料庫遷移:
-```bash
-docker-compose exec web python manage.py migrate
-```
-
 ### 建立使用者:
 ```bash
 docker-compose exec web python manage.py createsuperuser

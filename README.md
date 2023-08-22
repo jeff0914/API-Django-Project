@@ -14,21 +14,23 @@
 ```bash
 git clone https://github.com/jeff0914/API-Django-Project.git
 cd API-Django-Project/docker
+```
 
 ### 啟動 Docker:
 ```bash
 docker-compose up -d
-
+```
 將會建立和啟動所有必要的容器（Django, MariaDB)
 
 ### 執行資料庫遷移:
 ```bash
 docker-compose exec web python manage.py migrate
+```
 
 ### 建立使用者:
 ```bash
 docker-compose exec web python manage.py createsuperuser
-
+```
 按照提示輸入使用者名稱、電子郵件和密碼。
 
 ### 取得 JWT token:

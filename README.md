@@ -36,14 +36,17 @@ docker-compose exec web python manage.py createsuperuser
 ### 取得 JWT token:
 透過 api/token-auth/ endpoint 並提供使用者名稱和密碼以獲得 JWT token。此 token 之後可用於存取文章API。
 
+### Postman 測試說明:
+[JWT API Test](https://www.notion.so/API-Django-Project-df1beca5753042d890c309bb7d590f17)
+
 ### 使用 API
 一旦環境設置完成，您就可以透過以下的 endpoints 使用 API：
 
-GET /api/articles/ - 取得所有文章
-POST /api/articles/ - 新增文章
-GET /api/articles/<id>/ - 取得特定文章
-PUT /api/articles/<id>/ - 修改特定文章
-DELETE /api/articles/<id>/ - 刪除特定文章
+- **GET** `/api/articles/` - 取得所有文章
+- **POST** `/api/articles/` - 新增文章
+- **GET** `/api/articles/<id>/` - 取得特定文章
+- **PUT** `/api/articles/<id>/` - 修改特定文章
+- **DELETE** `/api/articles/<id>/` - 刪除特定文章
 
 ### 資料來源
 [DailyView](https://dailyview.tw/)

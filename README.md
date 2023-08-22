@@ -10,7 +10,7 @@
 
 ## 設置步驟
 
-### 獲取代碼:
+### 將專案clone:
 ```bash
 git clone https://github.com/jeff0914/API-Django-Project.git
 cd API-Django-Project/docker

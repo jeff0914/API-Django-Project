@@ -12,12 +12,12 @@ class ArticleListCreate(generics.ListCreateAPIView):
 class ArticleRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
-
+    permission_classes = [IsAuthenticated]
+    
 class ArticleListView(generics.ListAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
     permission_classes = [IsAuthenticated]
-
-    
+  
 def home(request):
     return HttpResponse("Welcome Dailyview API!")

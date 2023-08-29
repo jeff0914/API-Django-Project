@@ -1,6 +1,5 @@
 # API-Django-Project
 
-
 # 熱門文章 API
 
 專案使用 Django 3.2，並部署在 Docker 使用 Python 3.7，資料庫 MariaDB 

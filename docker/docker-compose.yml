@@ -2,7 +2,10 @@ version: '3'
 
 services:
   db:
-    image: mariadb:latest 
+    image: mariadb:latest
+    restart: always
+    volumes:
+      - db_data:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=mydatabase
       - MYSQL_USER=myuser
@@ -13,6 +16,7 @@ services:
 
   web:
     build: .
+    restart: always
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
@@ -21,3 +25,5 @@ services:
     depends_on:
       - db
 
+volumes:
+  db_data:

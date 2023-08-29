@@ -5,9 +5,9 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /code
 
 COPY requirements.txt /code/
-RUN apt-get update && apt-get install -y default-libmysqlclient-dev
-RUN apt-get update && apt-get install -y gcc
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN apt-get update && \
+    apt-get install -y default-libmysqlclient-dev gcc && \
+    pip install --upgrade pip && \
+    pip install -r requirements.txt
 
 COPY . /code/
